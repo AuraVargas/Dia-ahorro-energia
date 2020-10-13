@@ -75,6 +75,16 @@
           $(".portada").fadeOut();
           document.getElementsByTagName("body")[0].style.overflowY="visible"
         })
+        $("#btnInicio").mouseover(function(){
+        document.getElementById('btnInicio').style.backgroundImage= "url(resources/Image/Casa_encendida.png)"
+        document.getElementById('cielo').style.backgroundImage= "url(resources/Image/Cielo_noche.png)"
+        document.getElementById('portada').style.backgroundColor='#56566A'
+        })
+        $("#btnInicio").mouseout(function(){
+        document.getElementById('btnInicio').style.backgroundImage= "url(resources/Image/Casa_apagada.png)"
+        document.getElementById('cielo').style.backgroundImage= "url(resources/Image/Cielo_dia.png)"
+        document.getElementById('portada').style.backgroundColor='#AED6F1'
+        })
       });
     </script>
 
@@ -97,26 +107,37 @@
       body{
         overflow-y:hidden;
       }
+      .cielo{
+        position: absolute;
+        width: 100%;
+        height: 15%;
+        background-image: url("resources/Image/Cielo_dia.png");
+        background-size: cover;
+        background-position: left;
+      }
       .portada{
         position:fixed;
         width: 100%;
         height: 100%;
-        background-image: url("resources/Image/AdobeStock_272743927_Preview__1571428581644__thumb.jpg");
+        background-color: #AED6F1;
         z-index: 1050;
         background-size: cover;
         background-position: center;
       }
       .contentInicio{
+        
         width: 100%;
         height: 100%;
         left: 0;
         margin-top: 5%;
         position: absolute;
         text-align: center;
+        color: white;
+        font-size: 150%;
       }
       .subContent{
-        height: 50%;
-        padding: 4%;
+        height: 20%;
+        /* padding: 4%; */
       }
       .footerContent{
         height: 30%;
@@ -125,26 +146,33 @@
         position: center;
       }
       #btnInicio{
-        height: 150px;
-        width: 150px;
+        height: 300px;
+        width: 500px;
         margin: 0 auto;
         cursor: pointer;
+        background-image: url("resources/Image/Casa_apagada.png");
+        /* z-index: 1050; */
+        background-size: cover;
+        background-position: center;
+         /* background-color:black; */
       }
-      .cover-title{
+      
+      /* .cover-title{
         background-color: white;
-      }
+      } */
     </style>
-    <div class ="portada">
+    <div class ="portada"id="portada">
       <div class = "contentInicio">
+        <div class="cielo" id="cielo"></div>
+        <br></br>
         <div class ="subContent">
           <div id="titleInicio">
-            <h1>
-              Dia del ahorro energetico
-            </h1>
+            <h1 >
+              Dia del ahorro energetico</h1>
           </div>
         </div>
         <div class ="footerContent">
-          <button id="btnInicio">Presiona aqui</button>
+          <div id="btnInicio"></div>
         </div>
       </div>
     </div>
