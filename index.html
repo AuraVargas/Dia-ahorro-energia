@@ -71,6 +71,7 @@
     </script>
     <script>
       $(document).ready(function(){
+        
         $("#btnInicio").click(function(){
           $(".portada").fadeOut();
           document.getElementsByTagName("body")[0].style.overflowY="visible"
@@ -144,6 +145,17 @@
       }
       h1{
         position: center;
+      }
+      @media only screen and (max-width: 500px) { 
+        .subContent{
+        height: 30% !important;
+        /* padding: 4%; */
+        margin-top: 5%;
+      }
+        #btnInicio{
+        height: 120% !important;
+        width: 100% !important;
+        }
       }
       #btnInicio{
         height: 300px;
