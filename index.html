@@ -77,14 +77,14 @@
           document.getElementsByTagName("body")[0].style.overflowY="visible"
         })
         $("#btnInicio").mouseover(function(){
-        document.getElementById('btnInicio').style.backgroundImage= "url(resources/Image/Casa_encendida.png)"
-        document.getElementById('cielo').style.backgroundImage= "url(resources/Image/Cielo_noche.png)"
-        document.getElementById('portada').style.backgroundColor='#56566A'
-        })
-        $("#btnInicio").mouseout(function(){
         document.getElementById('btnInicio').style.backgroundImage= "url(resources/Image/Casa_apagada.png)"
         document.getElementById('cielo').style.backgroundImage= "url(resources/Image/Cielo_dia.png)"
         document.getElementById('portada').style.backgroundColor='#AED6F1'
+        })
+        $("#btnInicio").mouseout(function(){
+        document.getElementById('btnInicio').style.backgroundImage= "url(resources/Image/Casa_encendida.png)"
+        document.getElementById('cielo').style.backgroundImage= "url(resources/Image/Cielo_noche.png)"
+        document.getElementById('portada').style.backgroundColor='#56566A'
         })
       });
     </script>
@@ -112,7 +112,7 @@
         position: absolute;
         width: 100%;
         height: 15%;
-        background-image: url("resources/Image/Cielo_dia.png");
+        background-image: url("resources/Image/Cielo_noche.png");
         background-size: cover;
         background-position: left;
       }
@@ -120,10 +120,11 @@
         position:fixed;
         width: 100%;
         height: 100%;
-        background-color: #AED6F1;
+        background-color: #56566A;
         z-index: 1050;
         background-size: cover;
         background-position: center;
+        
       }
       .contentInicio{
         
@@ -143,9 +144,21 @@
       .footerContent{
         height: 30%;
       }
+      @font-face {
+  font-family: "My";
+  src: url("resources/fonts/Amalia.otf");
+}
       h1{
         position: center;
+        font-size: 50px;
+        font-family: "My";
       }
+      h2{
+        position: center;
+        /* font-size: 50px; */
+        font-family: "My";
+      }
+      
       @media only screen and (max-width: 500px) { 
         .subContent{
         height: 30% !important;
@@ -162,7 +175,7 @@
         width: 500px;
         margin: 0 auto;
         cursor: pointer;
-        background-image: url("resources/Image/Casa_apagada.png");
+        background-image: url("resources/Image/Casa_encendida.png");
         /* z-index: 1050; */
         background-size: cover;
         background-position: center;
@@ -179,13 +192,12 @@
         <br></br>
         <div class ="subContent">
           <div id="titleInicio">
-            <h1 >
-              Dia del ahorro energetico</h1>
+            <h1 >Día mundial del ahorro energético</h1>
           </div>
         </div>
         <div class ="footerContent">
           <div id="btnInicio"></div>
-          <h1 >Enciende la luz</h1>
+          <h2 >*Click aquí*</h1>
         </div>
       </div>
     </div>
